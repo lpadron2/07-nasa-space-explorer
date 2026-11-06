@@ -28,11 +28,13 @@
 
     <dialog id="imageModal" class="image-modal">
       <button id="closeModalButton" class="close-modal" type="button" aria-label="Close image details">&times;</button>
-      <img id="modalImage" class="modal-image" alt="" />
-      <video id="modalVideo" class="modal-video" controls></video>
-      <h2 id="modalTitle"></h2>
-      <time id="modalDate" class="image-date"></time>
-      <p id="modalExplanation"></p>
+      <div class="modal-scroll-content">
+        <img id="modalImage" class="modal-image" alt="" />
+        <video id="modalVideo" class="modal-video" controls></video>
+        <h2 id="modalTitle"></h2>
+        <time id="modalDate" class="image-date"></time>
+        <p id="modalExplanation"></p>
+      </div>
     </dialog>
   </div>
 

@@ -157,6 +157,11 @@ button:hover {
   object-fit: cover;
   aspect-ratio: 16 / 9;
   border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
 .gallery-item iframe {
@@ -215,14 +220,15 @@ button:hover {
 }
 
 .image-modal {
+  position: relative;
   width: min(90vw, 900px);
   max-width: 90vw;
   max-height: 90vh;
   margin: auto;
-  padding: 25px;
+  padding: 0;
   border: 0;
   border-radius: 8px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .image-modal::backdrop {
@@ -230,14 +236,38 @@ button:hover {
 }
 
 .close-modal {
-  display: block;
-  width: auto;
-  margin-left: auto;
-  padding: 4px 10px;
-  border: 0;
-  background: transparent;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dfe1e5;
+  border-radius: 50%;
+  color: #111827;
+  background: #ffffff;
+  opacity: 1;
+  visibility: visible;
+  appearance: none;
   font-size: 28px;
   line-height: 1;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #ffffff;
+  background: #20469a;
+}
+
+.modal-scroll-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 55px 25px 25px;
 }
 
 .modal-image {
